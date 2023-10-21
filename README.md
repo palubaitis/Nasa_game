@@ -2,4 +2,12 @@
 
 Nasa mission control game.
 
-A full-stack game,
+To start:
+
+Cd client
+npm start 
+
+&&
+
+Cd server
+npm run watch
