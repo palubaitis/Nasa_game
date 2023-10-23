@@ -1,6 +1,6 @@
 # Nasa_game
 
-Nasa mission control game.
+Nasa mission control game
 
 To start:
 
