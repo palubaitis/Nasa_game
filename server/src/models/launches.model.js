@@ -10,10 +10,15 @@ const launch = {
   target: "Kepler-442",
   customer: ["ZTM", "NASA"],
   upcoming: true,
-  success: true,
+  success: true
 };
 
 launches.set(launch.flightNumber, launch);
+
+
+function existsLaunchWithId(launchId){
+  return launches.has(launchId) 
+}
 
 function addNewLaunch(launch) {
   latestFlightNumber++;
@@ -32,7 +37,16 @@ function getAllLaunches() {
   return Array.from(launches.values());
 }
 
+function abortLaunchById (launchId){
+const aborted = launches.get(launchId)
+aborted.upcoming = false;
+aborted.success = false;
+return aborted
+}
+
 module.exports = {
   getAllLaunches,
   addNewLaunch,
+  existsLaunchWithId,
+  abortLaunchById,
 };
